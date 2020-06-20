@@ -1,0 +1,62 @@
+#:set color_text .20, .20, .20, 1
+#:set color_basic .80, .80, .80, 1
+#:set color_button .60, .60, .60, 1
+#:set color_button_released .80, .45, .29, 1
+
+<Editor_Buttons@Button>:
+	img_name: ''
+	background_down: ''
+	background_normal: ''
+	background_color: color_button
+	on_press: self.background_color = color_button_released
+	on_release: self.background_color = color_button
+	Image:
+		source: 'textures/' + self.parent.img_name
+		x: self.parent.center_x - 25
+		y: self.parent.center_y - 25
+		size_hint: None, None
+
+		width: 55
+		height: 55
+
+
+<EditorScreen>:
+	BoxLayout:
+		padding: 20
+		BoxLayout:
+			orientation: 'vertical'
+			Widget:
+				size_hint: 1, None
+				height: 10
+			BoxLayout:
+				id: area_image
+			Widget:
+				size_hint: 1, None
+				height: 10
+			BoxLayout:
+				size_hint: 1, None
+				height: 100
+				spacing: 5
+
+
+			BoxLayout:
+				size_hint: 1, None
+				height: 100
+				spacing: 5
+				BoxLayout:
+					size_hint: 1, None
+					height: 100
+					spacing: 5
+
+					Editor_Buttons:
+						img_name: 'btn_contrast_I.png'
+						on_release: root.increase_contrast()
+					Editor_Buttons:
+						img_name: 'btn_contrast_d.png'
+						on_release: root.decrease_contrast()
+					Editor_Buttons:
+						img_name: 'btn_sharpness_I.png'
+						on_release: root.increase_sharpness()
+					Editor_Buttons:
+						img_name: 'btn_sharpness_d.png'
+						on_release: root.decrease_sharpness()
