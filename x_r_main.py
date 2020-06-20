@@ -150,7 +150,7 @@ screen_T.add_widget(MainScreen(name='initial_screen'))
 screen_T.add_widget(EditorScreen(name='editor_screen'))
 
 class Program(App):
-    title = 'Editor of Images'
+    title = 'X-Ray Image Viewer'
     def build(self):
         return screen_T
 
