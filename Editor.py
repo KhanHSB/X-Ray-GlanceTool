@@ -1,3 +1,12 @@
+"""
+Created on Wed Jun 17 06:07:53 2020
+
+@author: Haseeb Khan
+@Work: Workbench_comp1
+:: Created using Standard and Imported Python Libraries
+:: Created for educational purposes, feel free to use this code with appropriate citations
+"""
+
 from os import path
 from PIL import Image, ImageEnhance
 
@@ -9,7 +18,7 @@ class Editor_Class():#Editor Class Variables.
     img_extension = None
     img_resolution = None
 
-    #Change this name
+    #Restarts the program everytime a new image is used.
     def restart(self):
         self.img = None
         self.img_name = None
