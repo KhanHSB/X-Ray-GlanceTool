@@ -1,3 +1,13 @@
+"""
+Created on Wed Jun 16 07:22:19 2020
+
+@author: Haseeb Khan
+@Work: Workbench_comp1
+:: Created using Standard and Imported Python Libraries
+:: Created for educational purposes, feel free to use this code with appropriate citations
+"""
+
+
 
 from kivy.uix.screenmanager import ScreenManager, Screen, NoTransition, FadeTransition, RiseInTransition
 #from io import BytesIO
